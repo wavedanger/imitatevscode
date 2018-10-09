@@ -1,4 +1,4 @@
-var defaultData = [
+﻿var defaultData = [
     {
         text: 'Parent 1',
         href: '#parent1',
