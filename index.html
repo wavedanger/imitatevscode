@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>iview example</title>
+    <!-- <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="lib/iview/iview.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="lib/treeview/css/bootstrap-treeview.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="interface.css">
+    <link rel="stylesheet" type="text/css" href="treeview.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <sider class="sider">
+                <ul class="nav nav-tabs nav-stacked text-center">
+                    <li class="active">
+                        <a href="#button1" data-toggle="tab">
+                            <Icon type="md-copy" />
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#button2" data-toggle="tab">
+                            <Icon type="logo-facebook" />
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#button3" data-toggle="tab">
+                            <Icon type="logo-twitter" />
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#button4" data-toggle="tab">
+                            <Icon type="md-git-network" />
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#button5" data-toggle="tab">
+                            <Icon type="md-git-network" />
+                        </a>
+                    </li>
+                </ul>
+            </sider>
+            <layout class="layout">
+                <i-content class="content">
+                    <split v-model="split1">
+                        <div slot="left" class="left-pane">
+                            <div class="tab-content">
+                                <div id="button1" class=" tab-pane fade in active">
+                                    <div>
+                                        <label>资源管理器</label>
+                                    </div>
+                                    <div id="tree"></div>
+                                </div>
+                                <div id="button2" class=" tab-pane fade">
+                                  2
+                                </div>
+                                <div id="button3" class=" tab-pane fade">
+                                    3
+                                    <!-- <i-menu class="i-menu">
+                                        <menu-group class="menu-group" title="资源管理器">
+                                            <menu-item class="menu-item" name="1">
+                                                wavedanger
+                                            </menu-item>
+                                            <menu-item class="menu-item" name="2">
+                                                wavedanger2
+                                            </menu-item>
+                                            <tree :data="data5" :render="renderContent" class="tree"></tree>
+                                        </menu-group>
+                                    </i-menu> -->
+                                </div>
+                                <div id="button4" class=" tab-pane fade">
+                                    4
+                                </div>
+                                <div id="button5" class=" tab-pane fade">
+                                    5
+                                </div>
+                            </div>
+                        </div>
+                        <div slot="right" class="right-pane">
+                            <!-- <tabs :animated="false" type="card" closable @on-tab-remove="handleTabRemove" class="tabs-card" id="tree-tabs">
+                                <tab-pane label="标签一" v-if="tab0">标签一的内容</tab-pane>
+                                <tab-pane label="标签二" v-if="tab1">标签二的内容</tab-pane>
+                                <tab-pane label="标签三" v-if="tab2">标签三的内容</tab-pane>
+                            </tabs> -->
+                            <div style="text-align:center;color:rgb(173,173,173);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">我是默认页面</div>
+                        </div>
+                    </split>
+                </i-content>
+            </layout>
+        </div>
+    </div>
+    <script type="text/javascript" src="lib/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/treeview/js/bootstrap-treeview.js"></script>
+    <script type="text/javascript" src="lib/iview/vue.min.js"></script>
+    <script type="text/javascript" src="lib/iview/iview.min.js"></script>
+    <script type="text/javascript" src="interface.js"></script>
+    <script type="text/javascript" src="treeview.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vue的render方法说明</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <child :level="1">
+            <div>hello</div><div>world</div>
+        </child>
+    </div>
+    <script>
+
+        Vue.component('abc', {
+            template: "<div>abc</div>"
+        })
+
+        Vue.component('child', {
+            render: function (createElement) {
+                console.log(this.$slots);
+                return createElement(
+                    'h' + this.level,
+                    {
+                        style:{
+                            color:'green'
+                        }
+                    },
+                    [this.$slots.default,createElement('abc',{
+                        style:{
+                            color:'red'
+                        }
+                    },[])]
+                )
+            },
+            props: {
+                level: {
+                    type: Number,
+                    required: true
+                }
+            }
+        })
+        new Vue({
+            el: '#app'
+        })
+    </script>
+</body>
+
+</html>
